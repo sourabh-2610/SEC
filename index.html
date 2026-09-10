@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions for Software Crisis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-brand-group">
+            <div class="nav-logo">SW<span>.</span>Crisis</div>
+            <!-- Style Switcher Toggle -->
+            <button class="style-switcher-btn" id="styleSwitcherBtn" aria-label="Toggle image style">
+                <span class="switcher-dot"></span>
+                <span class="switcher-text" id="switcherText">Simple 3D Art</span>
+            </button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#crisis">The Crisis</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#causes">Causes</a></li>
+            <li><a href="#sdlc">SDLC</a></li>
+            <li><a href="#timeline">Evolution</a></li>
+            <li><a href="#principles">Principles</a></li>
+            <li><a href="#thankyou">Thank You</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section — Names Only -->
+    <section class="hero" id="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-particles" id="particles"></div>
+
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Software Engineering Research
+        </div>
+
+        <p class="hero-presented" style="color: white;">Presenters</p>
+        <!-- <p class="hero-presented">Presenters</p> -->
+        <h2 class="hero-authors">
+            <span class="author-name" id="author1"><span class="name-text">Sourabh Dhulrao</span></span>
+            <span class="amp">&amp;</span>
+            <span class="author-name" id="author2"><span class="name-text">Darshan Jadhav</span></span>
+        </h2>
+
+        <div class="hero-scroll-indicator">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#52525b" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Subject Intro Section -->
+    <section class="subject-intro" id="subject">
+        <div class="subject-grid"></div>
+        <div class="subject-content reveal">
+            <div class="hero-separator"></div>
+            <h1 class="hero-title">
+                Solutions for the<br>
+                <span class="gradient-text">Software Crisis</span>
+            </h1>
+            <p class="hero-sub">
+                Exploring modern methodologies, engineering practices, and innovative approaches 
+                that address the fundamental challenges in software development.
+            </p>
+            <a href="#crisis" class="hero-cta">
+                Explore Solutions
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Crisis Section -->
+    <section id="crisis">
+        <div class="container">
+            <div class="crisis-grid">
+                <div class="reveal">
+                    <span class="section-label">Understanding the Problem</span>
+                    <h2 class="section-title">What is the Software Crisis?</h2>
+                    <p class="section-desc" style="margin-bottom:1.5rem;">
+                        The term <strong style="color:#fff;">"Software Crisis"</strong> was coined at the 
+                        1968 NATO Software Engineering Conference. It describes the difficulty of writing 
+                        useful and efficient computer programs within the required time and budget.
+                    </p>
+                    <p class="section-desc">
+                        Projects were running over budget, over time, producing low-quality software 
+                        that didn't meet requirements &mdash; sometimes resulting in catastrophic failures. 
+                        The gap between hardware capability and software delivery had become a crisis.
+                    </p>
+                </div>
+                <div class="crisis-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="66">0%</div>
+                        <div class="stat-label">Projects exceed budget or schedule</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="31">0%</div>
+                        <div class="stat-label">Projects cancelled before completion</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="80">0%</div>
+                        <div class="stat-label">Developer time on debugging</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number special" data-target="2.5">0x</div>
+                        <div class="stat-label">Average cost overrun multiplier</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software Crisis Milestone Visual Banner -->
+            <div class="crisis-visual-card reveal" style="margin-top: 3.5rem;">
+                <div class="sdlc-visual-header">
+                    <div>
+                        <span class="section-label">Historical Milestone</span>
+                        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; color:#fff; margin-top:0.3rem;">The Hardware vs. Software Capability Gap (NATO 1968)</h3>
+                        <p style="color:#a1a1aa; font-size:0.9rem; margin-top:0.2rem;">While computing hardware grew exponentially, software engineering faced catastrophic delays, budget overruns, and unmanaged complexity.</p>
+                    </div>
+                </div>
+                <div class="topic-image-wrapper crisis-image-wrapper">
+                    <img src="images/simple3d/crisis/software-crisis.svg" data-simple="images/simple3d/crisis/software-crisis.svg" data-v1="images/v1/crisis/software-crisis.jpg" alt="Historical Software Crisis: Hardware Exponential Growth vs Software Engineering Gap" class="topic-image zoomable" loading="lazy">
+                    <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Modern Approaches</span>
+                <h2 class="section-title">Key Solutions</h2>
+                <p class="section-desc">Proven strategies that have transformed how we build reliable software.</p>
+            </div>
+
+            <div class="solutions-grid" style="grid-template-columns: repeat(2, 1fr);">
+
+                <!-- 4 DETAILED POINTS (Explained by both) -->
+                <div class="solution-card reveal">
+                    <span class="solution-label both">Sourabh &amp; Darshan</span>
+                    <div class="solution-icon">&#128260;</div>
+                    <h3>Agile Development</h3>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/solutions/agile.svg" data-simple="images/simple3d/solutions/agile.svg" data-v1="images/v1/solutions/agile.jpg" alt="Agile Development Sprint Cycle & Iterative Feedback" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Instead of building the entire software at once, Agile breaks work into small parts called <strong style="color:#fff;">sprints</strong> (1-2 weeks). After each sprint the team shows the work, gets feedback, and improves. This way problems are caught early and the product stays on track.</p>
+                    <span class="solution-tag">Process</span>
+                    <div class="solution-click-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        Click for real-life example
+                    </div>
+                    <div class="solution-example">
+                        <div class="solution-example-inner">
+                            <div class="solution-example-title">&#128161; Real-Life Example</div>
+                            <p>Think of building a house. Instead of building the whole house and showing it at the end, you first build one room, show it to the owner, take feedback, fix things, then build the next room. This way the owner gets exactly what they want.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card reveal">
+                    <span class="solution-label both">Sourabh &amp; Darshan</span>
+                    <div class="solution-icon">&#128221;</div>
+                    <h3>Proper Planning &amp; Requirements</h3>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/solutions/planning.svg" data-simple="images/simple3d/solutions/planning.svg" data-v1="images/v1/solutions/planning.jpg" alt="Software Planning, User Stories & Architecture Blueprint" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Before writing any code, clearly understand <strong style="color:#fff;">what the user needs</strong>. Talk to users, create mockups, and write down every requirement. Most projects fail not because of bad coding, but because the team built the wrong thing.</p>
+                    <span class="solution-tag">Planning</span>
+                    <div class="solution-click-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        Click for real-life example
+                    </div>
+                    <div class="solution-example">
+                        <div class="solution-example-inner">
+                            <div class="solution-example-title">&#128161; Real-Life Example</div>
+                            <p>Imagine ordering food without reading the menu &mdash; you'll get something you don't want. Similarly, if developers start coding without understanding what users need, they'll build the wrong features and waste months of work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card reveal">
+                    <span class="solution-label both">Sourabh &amp; Darshan</span>
+                    <div class="solution-icon">&#128737;</div>
+                    <h3>Better Testing</h3>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/solutions/testing.svg" data-simple="images/simple3d/solutions/testing.svg" data-v1="images/v1/solutions/testing.jpg" alt="Automated Testing Pyramid & Quality Assurance Shield" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Test the software <strong style="color:#fff;">at every stage</strong>, not just at the end. Use unit tests, integration tests, and automated testing tools. A bug found during development costs 10x less to fix than one found after release.</p>
+                    <span class="solution-tag">Quality</span>
+                    <div class="solution-click-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        Click for real-life example
+                    </div>
+                    <div class="solution-example">
+                        <div class="solution-example-inner">
+                            <div class="solution-example-title">&#128161; Real-Life Example</div>
+                            <p>It's like proofreading an essay after every paragraph instead of writing the whole essay first. If you wait until the end, one early mistake could mess up everything that follows &mdash; and fixing it takes much longer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card reveal">
+                    <span class="solution-label both">Sourabh &amp; Darshan</span>
+                    <div class="solution-icon">&#9881;</div>
+                    <h3>DevOps &amp; CI/CD</h3>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/solutions/devops.svg" data-simple="images/simple3d/solutions/devops.svg" data-v1="images/v1/solutions/devops.jpg" alt="DevOps CI/CD Pipeline Infinity Loop" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Automate the process of building, testing, and deploying code using <strong style="color:#fff;">CI/CD pipelines</strong>. Every time a developer pushes code, it is automatically tested and deployed. This removes human errors and speeds up delivery.</p>
+                    <span class="solution-tag">Automation</span>
+                    <div class="solution-click-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        Click for real-life example
+                    </div>
+                    <div class="solution-example">
+                        <div class="solution-example-inner">
+                            <div class="solution-example-title">&#128161; Real-Life Example</div>
+                            <p>Think of an automatic car wash vs. washing by hand. The machine does the same quality job every time, faster, and without mistakes. CI/CD does the same for software &mdash; it automatically checks and delivers code without manual effort.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 EASY POINTS (Simple to explain) -->
+                <div class="solution-card reveal">
+                    <span class="solution-label easy">Easy to Explain</span>
+                    <div class="solution-icon">&#129513;</div>
+                    <h3>Reusable Components</h3>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/solutions/reusable.svg" data-simple="images/simple3d/solutions/reusable.svg" data-v1="images/v1/solutions/reusable.jpg" alt="Reusable Software Modular Building Blocks" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Don't build everything from scratch. Use existing libraries, frameworks, and break your software into small reusable pieces.</p>
+                    <span class="solution-tag">Architecture</span>
+                    <div class="solution-click-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        Click for real-life example
+                    </div>
+                    <div class="solution-example">
+                        <div class="solution-example-inner">
+                            <div class="solution-example-title">&#128161; Real-Life Example</div>
+                            <p>LEGO blocks! You don't make new blocks every time &mdash; you reuse the same pieces to build different things. Similarly, developers reuse code components like login systems, payment gateways, etc. instead of writing them again.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card reveal">
+                    <span class="solution-label easy">Easy to Explain</span>
+                    <div class="solution-icon">&#129302;</div>
+                    <h3>AI-Assisted Development</h3>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/solutions/ai-dev.svg" data-simple="images/simple3d/solutions/ai-dev.svg" data-v1="images/v1/solutions/ai-dev.jpg" alt="AI-Assisted Software Development & Intelligent Pair Programming" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Use AI tools to write code faster, auto-detect bugs, and help developers focus on solving the real problems instead of repetitive tasks.</p>
+                    <span class="solution-tag">Innovation</span>
+                    <div class="solution-click-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        Click for real-life example
+                    </div>
+                    <div class="solution-example">
+                        <div class="solution-example-inner">
+                            <div class="solution-example-title">&#128161; Real-Life Example</div>
+                            <p>Just like spell-check in Google Docs catches your typos while you type, AI coding tools like GitHub Copilot suggest code and catch bugs in real-time &mdash; so developers can work faster and make fewer mistakes.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section id="causes" style="border-top: 1px solid rgba(255,255,255,0.04);">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Why It Happens</span>
+                <h2 class="section-title">Causes of the Software Crisis</h2>
+                <p class="section-desc">Before solving a problem, we need to understand why it happens in the first place.</p>
+            </div>
+
+            <div class="causes-grid" style="margin-top:2.5rem;">
+                <div class="cause-card reveal">
+                    <div class="cause-header">
+                        <div class="principle-num">01</div>
+                        <h3>Increasing Complexity</h3>
+                    </div>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/causes/complexity.svg" data-simple="images/simple3d/causes/complexity.svg" data-v1="images/v1/causes/complexity.jpg" alt="Increasing Software Complexity: Spaghetti Code & Monolithic Architecture" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Software systems keep getting bigger and more complex. A small app has thousands of lines of code, but enterprise software has millions &mdash; making it extremely hard to manage.</p>
+                </div>
+                <div class="cause-card reveal">
+                    <div class="cause-header">
+                        <div class="principle-num">02</div>
+                        <h3>Poor Requirements</h3>
+                    </div>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/causes/poor-requirements.svg" data-simple="images/simple3d/causes/poor-requirements.svg" data-v1="images/v1/causes/poor-requirements.jpg" alt="Software Requirements Gap & Unclear Specifications" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Many projects fail because the team doesn't clearly understand what the client wants. Unclear or changing requirements lead to wrong features and wasted effort.</p>
+                </div>
+                <div class="cause-card reveal">
+                    <div class="cause-header">
+                        <div class="principle-num">03</div>
+                        <h3>Lack of Skilled Developers</h3>
+                    </div>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/causes/skills-gap.svg" data-simple="images/simple3d/causes/skills-gap.svg" data-v1="images/v1/causes/skills-gap.jpg" alt="Software Engineering Skills Shortage & Demand Curve" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Not enough trained software engineers to handle the growing demand. Untrained teams write poor quality code, leading to bugs, delays, and project failures.</p>
+                </div>
+                <div class="cause-card reveal">
+                    <div class="cause-header">
+                        <div class="principle-num">04</div>
+                        <h3>Unrealistic Deadlines &amp; Budgets</h3>
+                    </div>
+                    <div class="topic-image-wrapper">
+                        <img src="images/simple3d/causes/deadlines.svg" data-simple="images/simple3d/causes/deadlines.svg" data-v1="images/v1/causes/deadlines.jpg" alt="Project Management Iron Triangle Collapsing under Deadlines & Budgets" class="topic-image zoomable" loading="lazy">
+                        <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                    </div>
+                    <p>Management often sets impossible deadlines without understanding the actual effort needed. This forces teams to cut corners, skip testing, and ship broken software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDLC Section -->
+    <section id="sdlc" style="border-top: 1px solid rgba(255,255,255,0.04);">
+        <div class="container">
+            <div class="crisis-grid">
+                <div class="reveal">
+                    <span class="section-label">Structured Process</span>
+                    <h2 class="section-title">Role of SDLC</h2>
+                    <p class="section-desc" style="margin-bottom:1.5rem;">
+                        The <strong style="color:#fff;">Software Development Life Cycle (SDLC)</strong> is a step-by-step process that guides how software should be planned, built, tested, and delivered.
+                    </p>
+                    <p class="section-desc" style="margin-bottom:1.5rem;">
+                        Without SDLC, development is chaotic &mdash; like building a house without a blueprint. SDLC brings discipline, reduces risks, and ensures the final product actually works as expected.
+                    </p>
+                    <p class="section-desc">
+                        Popular SDLC models include <strong style="color:#fff;">Waterfall</strong> (step-by-step), <strong style="color:#fff;">Agile</strong> (iterative), <strong style="color:#fff;">Spiral</strong> (risk-focused), and <strong style="color:#fff;">V-Model</strong> (testing at each stage).
+                    </p>
+                </div>
+                <div class="crisis-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size:1.5rem; color:#6366f1;">&#128203;</div>
+                        <div class="stat-label" style="color:#fff; font-weight:600; margin-bottom:0.3rem;">Planning</div>
+                        <div class="stat-label">Define goals, scope, timeline, and resources needed for the project.</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size:1.5rem; color:#6366f1;">&#128296;</div>
+                        <div class="stat-label" style="color:#fff; font-weight:600; margin-bottom:0.3rem;">Development</div>
+                        <div class="stat-label">Write clean, modular code following the design and requirements.</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size:1.5rem; color:#6366f1;">&#128269;</div>
+                        <div class="stat-label" style="color:#fff; font-weight:600; margin-bottom:0.3rem;">Testing</div>
+                        <div class="stat-label">Find and fix bugs before the software reaches real users.</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size:1.5rem; color:#6366f1;">&#128640;</div>
+                        <div class="stat-label" style="color:#fff; font-weight:600; margin-bottom:0.3rem;">Deployment</div>
+                        <div class="stat-label">Release the software to users and maintain it with updates and fixes.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full SDLC Visual Lifecycle Card -->
+            <div class="sdlc-visual-card reveal" style="margin-top: 3.5rem;">
+                <div class="sdlc-visual-header">
+                    <div>
+                        <span class="section-label">Complete Workflow</span>
+                        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; color:#fff; margin-top:0.3rem;">SDLC 6-Phase Engineering Loop</h3>
+                        <p style="color:#a1a1aa; font-size:0.9rem; margin-top:0.2rem;">From planning &amp; requirements analysis to automated testing, deployment, and ongoing maintenance.</p>
+                    </div>
+                </div>
+                <div class="topic-image-wrapper sdlc-image-wrapper">
+                    <img src="images/simple3d/sdlc/sdlc-cycle.svg" data-simple="images/simple3d/sdlc/sdlc-cycle.svg" data-v1="images/v1/sdlc/sdlc-cycle.jpg" alt="Software Development Life Cycle 6-Phase Loop Diagram" class="topic-image zoomable" loading="lazy">
+                    <span class="zoom-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg> Click to enlarge</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">Historical Evolution</span>
+                <h2 class="section-title">Evolution of Solutions</h2>
+                <p class="section-desc" style="margin:0 auto;">How the industry responded to the software crisis over the decades.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1968</div>
+                        <h4>NATO Conference</h4>
+                        <p>The term "Software Crisis" was coined. Software engineering was proposed as a discipline.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1970s</div>
+                        <h4>Waterfall Model</h4>
+                        <p>Structured programming and the Waterfall lifecycle brought order to chaotic development processes.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980s</div>
+                        <h4>OOP &amp; CASE Tools</h4>
+                        <p>Object-Oriented Programming and Computer-Aided Software Engineering tools improved code reuse and design.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1990s</div>
+                        <h4>CMM &amp; Process Maturity</h4>
+                        <p>The Capability Maturity Model formalized process improvement. Open source revolutionized collaboration.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2001</div>
+                        <h4>Agile Manifesto</h4>
+                        <p>17 practitioners published the Agile Manifesto, shifting focus from heavy processes to adaptive development.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010s</div>
+                        <h4>DevOps Revolution</h4>
+                        <p>Cloud computing, containerization (Docker), and CI/CD pipelines transformed software delivery.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <h4>AI-Powered Engineering</h4>
+                        <p>AI code assistants, automated testing, and intelligent DevOps mark the next evolution in addressing the crisis.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principles Section -->
+    <section id="principles">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Core Principles</span>
+                <h2 class="section-title">Guiding Principles</h2>
+                <p class="section-desc">Fundamental values that underpin every successful software project.</p>
+            </div>
+
+            <div class="principles-grid">
+                <div class="principle-card reveal">
+                    <div class="principle-num">01</div>
+                    <div>
+                        <h3>Simplicity Over Complexity</h3>
+                        <p>The best solutions are often the simplest. Avoid unnecessary complexity in design, architecture, and code.</p>
+                    </div>
+                </div>
+                <div class="principle-card reveal">
+                    <div class="principle-num">02</div>
+                    <div>
+                        <h3>Continuous Improvement</h3>
+                        <p>Regularly reflect on processes and outcomes. Iterate, learn from mistakes, and evolve your practices.</p>
+                    </div>
+                </div>
+                <div class="principle-card reveal">
+                    <div class="principle-num">03</div>
+                    <div>
+                        <h3>Early &amp; Frequent Testing</h3>
+                        <p>Shift testing left. Catch defects early when they're cheapest to fix. Automate everything repeatable.</p>
+                    </div>
+                </div>
+                <div class="principle-card reveal">
+                    <div class="principle-num">04</div>
+                    <div>
+                        <h3>Stakeholder Collaboration</h3>
+                        <p>Involve users and stakeholders throughout development. Their feedback is the compass for delivering real value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thankyou">
+        <div class="thankyou-orbs">
+            <div class="thankyou-orb"></div>
+            <div class="thankyou-orb"></div>
+            <div class="thankyou-orb"></div>
+        </div>
+        <div class="thankyou-bg"></div>
+        <div class="thankyou-content reveal">
+            <p class="thankyou-label">We Appreciate Your Time</p>
+            <h2 class="thankyou-heading">Thank You, folks!</h2>
+            <p class="thankyou-quote">
+                The best way to predict the future of software is to engineer it &mdash; one solution at a time.
+            </p>
+            <div class="thankyou-authors">
+            </div>
+            <div class="thankyou-line"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="hero-presented" style="color: rgb(43, 204, 244);">CRAFTED BY</p>
+        <div class="footer-names">
+            Sourabh Dhulrao <span>&amp;</span> Darshan Jadhav
+        </div>
+        <p>&copy; 2026 &mdash; Solutions for the Software Crisis</p>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-dialog">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="lightbox-image-wrap">
+                <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+                <div class="lightbox-hint">Press <kbd>ESC</kbd> or click outside to close</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

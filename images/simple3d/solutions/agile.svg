@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="agile-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#191929"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="agile-track" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#agile-bg)"/>
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="225" r="160" fill="#6366f1" opacity="0.18" filter="url(#glow1)"/>
+
+  <!-- Isometric Ground Shadow -->
+  <ellipse cx="400" cy="265" rx="230" ry="90" fill="#050508" opacity="0.7"/>
+
+  <!-- 3D Sprint Loop Ribbon -->
+  <g transform="translate(400, 220)">
+    <!-- Base Extrusion -->
+    <ellipse cx="0" cy="25" rx="210" ry="85" fill="none" stroke="#312e81" stroke-width="38" opacity="0.6"/>
+    <!-- Main Glowing Track -->
+    <ellipse cx="0" cy="10" rx="210" ry="85" fill="none" stroke="url(#agile-track)" stroke-width="36" filter="url(#glow1)"/>
+    <ellipse cx="0" cy="10" rx="160" ry="60" fill="#0d0d16" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+  </g>
+
+  <!-- Center Delivered Feature 3D Gift Cube -->
+  <g transform="translate(400, 195)">
+    <ellipse cx="0" cy="35" rx="35" ry="14" fill="rgba(0,0,0,0.5)"/>
+    <polygon points="0,-28 32,-12 0,4 -32,-12" fill="#a5b4fc"/>
+    <polygon points="-32,-12 0,4 0,36 -32,20" fill="#4f46e5"/>
+    <polygon points="0,4 32,-12 32,20 0,36" fill="#6366f1"/>
+    <line x1="0" y1="-28" x2="0" y2="36" stroke="#e0e7ff" stroke-width="3" opacity="0.8"/>
+    <line x1="-32" y1="-12" x2="32" y2="-12" stroke="#e0e7ff" stroke-width="3" opacity="0.8"/>
+    <circle cx="0" cy="4" r="5" fill="#38bdf8" filter="url(#glow1)"/>
+  </g>
+
+  <!-- Milestone Flag 1: PLAN -->
+  <g transform="translate(200, 185)">
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#a5b4fc" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="0,-45 50,-32 0,-18" fill="#38bdf8" filter="url(#glow1)"/>
+    <text x="14" y="-30" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#fff">PLAN</text>
+  </g>
+
+  <!-- Milestone Flag 2: SPRINT -->
+  <g transform="translate(400, 105)">
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#c084fc" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="0,-45 60,-32 0,-18" fill="#ec4899" filter="url(#glow1)"/>
+    <text x="11" y="-29" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#fff">SPRINT</text>
+  </g>
+
+  <!-- Milestone Flag 3: REVIEW -->
+  <g transform="translate(600, 185)">
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#a5b4fc" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="0,-45 60,-32 0,-18" fill="#818cf8" filter="url(#glow1)"/>
+    <text x="11" y="-30" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="800" fill="#fff">REVIEW</text>
+  </g>
+
+  <!-- Milestone Flag 4: DEPLOY -->
+  <g transform="translate(400, 310)">
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#6ee7b7" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="0,-45 60,-32 0,-18" fill="#10b981" filter="url(#glow1)"/>
+    <text x="10" y="-30" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="800" fill="#fff">DEPLOY</text>
+  </g>
+
+  <text x="400" y="415" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#c7d2fe" letter-spacing="2">RAPID 2-WEEK ITERATION SPRINT CYCLE</text>
+</svg>

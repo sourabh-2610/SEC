@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="dead-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#221115"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#dead-bg)"/>
+  <ellipse cx="400" cy="305" rx="220" ry="60" fill="#080304" opacity="0.8"/>
+
+  <!-- 3D Glowing Ticking Stopwatch -->
+  <g transform="translate(350, 195)" filter="url(#glowRed)">
+    <circle cx="0" cy="0" r="75" fill="#180c0e" stroke="#ef4444" stroke-width="5"/>
+    <circle cx="0" cy="0" r="62" fill="#2d1216" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <!-- Top Button -->
+    <rect x="-10" y="-90" width="20" height="15" rx="3" fill="#ef4444"/>
+    <!-- Hour Marks -->
+    <line x1="0" y1="-55" x2="0" y2="-45" stroke="#fff" stroke-width="3"/>
+    <line x1="55" y1="0" x2="45" y2="0" stroke="#fff" stroke-width="3"/>
+    <line x1="0" y1="55" x2="0" y2="45" stroke="#fff" stroke-width="3"/>
+    <line x1="-55" y1="0" x2="-45" y2="0" stroke="#fff" stroke-width="3"/>
+    <!-- Red Urgency Hand at 11:59 -->
+    <line x1="0" y1="0" x2="-8" y2="-48" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="7" fill="#fff"/>
+  </g>
+
+  <!-- Burning / Ripped Calendar Sheet on Right -->
+  <g transform="translate(530, 195)">
+    <rect x="-45" y="-50" width="90" height="100" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <rect x="-45" y="-50" width="90" height="25" rx="10" fill="#ef4444"/>
+    <text x="0" y="-32" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="900" fill="#fff">DEADLINE</text>
+    <!-- Big Rushed 'OVERDUE' -->
+    <text x="0" y="15" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="900" fill="#ef4444">00</text>
+    <text x="0" y="38" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700" fill="#94a3b8">DAYS LEFT</text>
+  </g>
+
+  <text x="400" y="415" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#ef4444" letter-spacing="2">IMPOSSIBLE TIMELINES LEAD TO RUSHED, BROKEN CODE</text>
+</svg>

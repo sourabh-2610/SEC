@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sdlc-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#151b2e"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="sdlc-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="25%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="75%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="sdlc-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#sdlc-bg)"/>
+  <ellipse cx="400" cy="275" rx="250" ry="80" fill="#04060d" opacity="0.8"/>
+
+  <!-- 3D Continuous Hexagonal Cycle Ring -->
+  <g filter="url(#sdlc-glow)" transform="translate(400, 215)">
+    <ellipse cx="0" cy="15" rx="230" ry="90" fill="none" stroke="#1e293b" stroke-width="40" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="230" ry="90" fill="none" stroke="url(#sdlc-ring)" stroke-width="32"/>
+    <ellipse cx="0" cy="0" rx="180" ry="60" fill="#0a0a14" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+  </g>
+
+  <!-- Center SDLC Logo -->
+  <g transform="translate(400, 215)">
+    <text x="0" y="-5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="900" fill="#fff">SDLC</text>
+    <text x="0" y="15" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700" fill="#a5b4fc" letter-spacing="1">CONTINUOUS PROCESS</text>
+  </g>
+
+  <!-- 6 Phase Badges around Ring -->
+  <!-- 1. Planning -->
+  <g transform="translate(400, 110)">
+    <rect x="-55" y="-18" width="110" height="36" rx="18" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#7dd3fc">1. PLANNING</text>
+  </g>
+  <!-- 2. Requirements -->
+  <g transform="translate(610, 160)">
+    <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#c7d2fe">2. REQUIREMENTS</text>
+  </g>
+  <!-- 3. Design -->
+  <g transform="translate(610, 270)">
+    <rect x="-55" y="-18" width="110" height="36" rx="18" fill="#4c1d95" stroke="#c084fc" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#e9d5ff">3. DESIGN</text>
+  </g>
+  <!-- 4. Development -->
+  <g transform="translate(400, 320)">
+    <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#831843" stroke="#f472b6" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#fbcfe8">4. DEVELOPMENT</text>
+  </g>
+  <!-- 5. Testing -->
+  <g transform="translate(190, 270)">
+    <rect x="-55" y="-18" width="110" height="36" rx="18" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#a7f3d0">5. TESTING</text>
+  </g>
+  <!-- 6. Deployment -->
+  <g transform="translate(190, 160)">
+    <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#fef08a">6. DEPLOYMENT</text>
+  </g>
+
+  <text x="400" y="420" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#94a3b8" letter-spacing="2">6-PHASE STRUCTURED SOFTWARE DEVELOPMENT LIFE CYCLE</text>
+</svg>

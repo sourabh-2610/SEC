@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="req-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1f1816"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#req-bg)"/>
+  <ellipse cx="400" cy="295" rx="220" ry="60" fill="#090503" opacity="0.75"/>
+
+  <!-- Left Puzzle Piece (Indigo: Client Wants) -->
+  <g transform="translate(300, 195)">
+    <rect x="-60" y="-50" width="100" height="100" rx="14" fill="#4f46e5" stroke="#818cf8" stroke-width="3"/>
+    <circle cx="40" cy="0" r="18" fill="#4f46e5" stroke="#818cf8" stroke-width="3"/>
+    <text x="-10" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="800" fill="#fff">USER NEED</text>
+  </g>
+
+  <!-- Gap Floating Question Mark -->
+  <g transform="translate(400, 165)">
+    <circle cx="0" cy="0" r="28" fill="#f97316" opacity="0.2"/>
+    <circle cx="0" cy="0" r="20" fill="#ea580c"/>
+    <text x="0" y="8" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="900" fill="#fff">?</text>
+  </g>
+
+  <!-- Right Puzzle Piece (Orange: What Developer Built, Mismatched Edge) -->
+  <g transform="translate(500, 195)">
+    <rect x="-40" y="-50" width="100" height="100" rx="14" fill="#c2410c" stroke="#fb923c" stroke-width="3"/>
+    <!-- Incompatible Triangle Notch -->
+    <polygon points="-40,-15 -20,0 -40,15" fill="#1f1816" stroke="#fb923c" stroke-width="3"/>
+    <text x="10" y="5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="800" fill="#fff">WHAT BUILT</text>
+  </g>
+
+  <text x="400" y="415" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#fb923c" letter-spacing="2">COMMUNICATION GAP &amp; MISUNDERSTOOD SCOPE</text>
+</svg>
